@@ -5,7 +5,7 @@ from os import getenv
 
 API_ID = int(getenv('API_ID','18770647'))
 API_HASH = getenv('API_HASH','ed11b8af8b51418dbac60b456d1429a7')
-BOT_TOKEN = getenv('BOT_TOKEN','6295293651:AAGcIjHlkB3PqXcSlw7qX1uT2S6KAj14oJU')
+BOT_TOKEN = getenv('BOT_TOKEN','6295293651:AAF4waf1xDYLwi06V9y7MzxEav3p3bj5EmU')
 MONGO_DB_URL = getenv('MONGO_DB_URL','mongodb+srv://Itachi:Itachi_123@itachi.wz6e5.mongodb.net/?retryWrites=true&w=majority')
 SUPPORT_CHAT = getenv('SUPPORT_CHAT','BHatsGroup')
 UPDATES_CHANNEL = getenv('UPDATES_CHANNEL','BHatsGroup')
