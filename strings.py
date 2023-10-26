@@ -35,27 +35,30 @@ Main commands available:
 
 START_BUTTONS = [
     [
-        InlineKeyboardButton(text="Help 🚨", callback_data="help_back"),
-        InlineKeyboardButton(text="Support 🆘", url=f"t.me/{SUPPORT_CHAT}")
+        InlineKeyboardButton(text="𝙃𝙚𝙡𝙥 𝘼𝙣𝙙 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨 🚨", callback_data="help_back")
+    ],
+    [      
+        InlineKeyboardButton(text="𝙐𝙥𝙙𝙖𝙩𝙚 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 🆘", url=f"t.me/{UPDATES_CHANNEL}"),
+        InlineKeyboardButton(text="𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥 🆘", url=f"t.me/{SUPPORT_CHAT}")
     ], 
     [
-        InlineKeyboardButton(text="Music 🎶", callback_data="music_p"),
-        InlineKeyboardButton(text="Ai 🤖", callback_data="ai_help")
+        InlineKeyboardButton(text="𝙊𝙪𝙧 𝙉𝙚𝙩𝙬𝙤𝙧𝙩 🎶", url=f"https://t.me/Emperors_Network"),
+        InlineKeyboardButton(text="𝘼𝙞 🤖", callback_data="ai_help")
     ], 
     [
         InlineKeyboardButton(
-            text="☯️ Add Itachi To Group ☯️",
+            text="☯️ 𝘼𝙙𝙙 𝙄𝙩𝙖𝙘𝙝𝙞 𝙏𝙤 𝙈𝙖𝙣𝙖𝙜𝙚 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥 ☯️",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],     
 ]
 GRP_START = [
     [
-        InlineKeyboardButton(text="Updates", url=f"t.me/{UPDATES_CHANNEL}"),
-        InlineKeyboardButton(text="Support", url=f"t.me/{SUPPORT_CHAT}")
+        InlineKeyboardButton(text="𝙐𝙥𝙙𝙖𝙩𝙚𝙨", url=f"t.me/{UPDATES_CHANNEL}"),
+        InlineKeyboardButton(text="𝙎𝙪𝙥𝙥𝙤𝙧𝙩", url=f"t.me/{SUPPORT_CHAT}")
     ], 
     [
-       InlineKeyboardButton("System Stats",callback_data="Friday_st")
+       InlineKeyboardButton("𝙎𝙮𝙨𝙩𝙚𝙢 𝙎𝙩𝙖𝙩𝙨",callback_data="Friday_st")
     ],
 ]
 BACK_BTN = [[InlineKeyboardButton("🔙",callback_data="friday_back")]]
