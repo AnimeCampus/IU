@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 import json
 
 # Your bot token
-bot_token = "5520008350:AAGPmq6TBfqZJ0LFyArDVfmpMev3QRH3ukg"
+bot_token = "6295293651:AAF4waf1xDYLwi06V9y7MzxEav3p3bj5EmU"
 SUPPORT_CHAT = "UchihaPolice_Support"
 
 # Command handler
