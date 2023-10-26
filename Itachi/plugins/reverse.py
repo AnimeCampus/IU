@@ -22,6 +22,22 @@ import json
 bot_token = "5520008350:AAGPmq6TBfqZJ0LFyArDVfmpMev3QRH3ukg"
 SUPPORT_CHAT = "UchihaPolice_Support"
 
+# Command handler
+@app.on_message(filters.command(["pp", "grs", "reverse", "p", "po"]))
+async def reverse_command(_, msg):
+    text = await msg.reply("**⇢ Please wait a moment...**")
+    file_id = await get_file_id_from_message(msg)
+    if not file_id:
+        return await text.edit("**Please reply to a media file!**")
+    await text.edit("**⇢ Requesting information from Google...**")
+    result = await sauce(bot_token, file_id)
+    if not result:
+        return await text.edit(f"**API is currently down. Contact @{SUPPORT_CHAT} for support.**")
+    await text.edit('**Result ⇢** `{}`'.format(result['title']), disable_web_page_preview=True,
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Source", url=result['url'])]]))
+
+
+
 # Function to get the file ID from a message
 async def get_file_id_from_message(msg):
     file_id = None
@@ -94,21 +110,4 @@ async def sauce(bot_token, file_id):
         return {"title": title, "url": redirect_url}
     else:
         return False
-
-# Initialize the bot
-app = Client("sauce_bot", bot_token=bot_token)
-
-# Command handler
-@app.on_message(filters.command(["pp", "grs", "reverse", "p", "po"]))
-async def reverse_command(_, msg):
-    text = await msg.reply("**⇢ Please wait a moment...**")
-    file_id = await get_file_id_from_message(msg)
-    if not file_id:
-        return await text.edit("**Please reply to a media file!**")
-    await text.edit("**⇢ Requesting information from Google...**")
-    result = await sauce(bot_token, file_id)
-    if not result:
-        return await text.edit(f"**API is currently down. Contact @{SUPPORT_CHAT} for support.**")
-    await text.edit('**Result ⇢** `{}`'.format(result['title']), disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Source", url=result['url'])]]))
 
